@@ -2,7 +2,8 @@
 from enum import Enum
 from typing import List, Optional, Tuple, Union
 
-import matplotlib
+import matplotlib.pyplot as plt
+from matplotlib.colors import ListedColormap
 from cycler import cycler
 
 from .colors import Colors
@@ -10,7 +11,7 @@ from .colors import Colors
 
 def create_colormap(
     colors: List[Union[Colors, Tuple[int, int, int]]]
-) -> matplotlib.colors.ListedColormap:
+) -> ListedColormap:
     used_colors = []
     for color in colors:
         if isinstance(color, Colors):
@@ -22,7 +23,7 @@ def create_colormap(
                 "Invalid color format when creating a new colormap. "
                 "Use either a color from the Colors enum or a tuple containing RGB values."
             )
-    return matplotlib.colors.ListedColormap(
+    return ListedColormap(
         [tuple(color_value / 255 for color_value in color) for color in used_colors]
     )
 
@@ -65,10 +66,8 @@ class Colormaps(Enum):
 
 
 def use_colormap(
-    cmap: Optional[Union[Colormaps, matplotlib.colors.ListedColormap]] = Colormaps.RETRO
+    cmap: Optional[Union[Colormaps, ListedColormap]] = Colormaps.RETRO
 ) -> None:
     if isinstance(cmap, Colormaps):
         cmap = cmap.value
-    matplotlib.pyplot.rcParams["axes.prop_cycle"] = cycler(
-        color=[cmap(i) for i in range(cmap.N)]
-    )
+    plt.rcParams["axes.prop_cycle"] = cycler(color=[cmap(i) for i in range(cmap.N)])
