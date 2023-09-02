@@ -15,7 +15,7 @@ def create_colormap(colors: List[Colors]) -> matplotlib.colors.ListedColormap:
 
 
 class Colormaps(Enum):
-    TBD = create_colormap(
+    PASTEL = create_colormap(
         [
             Colors.TEA_GREEN,
             Colors.WHEAT,
@@ -25,7 +25,7 @@ class Colormaps(Enum):
             Colors.CINEREOUS,
         ]
     )
-    TBD2 = create_colormap(
+    HEAT = create_colormap(
         [
             Colors.GRAY,
             Colors.HEATHER,
@@ -35,7 +35,7 @@ class Colormaps(Enum):
             Colors.LEMON,
         ]
     )
-    TBD3 = create_colormap(
+    RETRO = create_colormap(
         [
             Colors.LIGHT_BLACK,
             Colors.LIGHT_PETROL,
@@ -51,7 +51,7 @@ class Colormaps(Enum):
     )
 
 
-def use_colormap(cmap: Optional[Colormaps] = Colormaps.TBD) -> None:
+def use_colormap(cmap: Optional[Colormaps] = Colormaps.RETRO) -> None:
     matplotlib.pyplot.rcParams["axes.prop_cycle"] = cycler(
         color=[cmap.value(i) for i in range(cmap.value.N)]
     )
