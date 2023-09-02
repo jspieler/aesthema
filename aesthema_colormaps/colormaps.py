@@ -23,7 +23,7 @@ def create_colormap(
                 "Use either a color from the Colors enum or a tuple containing RGB values."
             )
     return matplotlib.colors.ListedColormap(
-        [tuple(color_value / 255 for color_value in color.value) for color in colors]
+        [tuple(color_value / 255 for color_value in color) for color in used_colors]
     )
 
 
@@ -64,7 +64,11 @@ class Colormaps(Enum):
     )
 
 
-def use_colormap(cmap: Optional[Colormaps] = Colormaps.RETRO) -> None:
+def use_colormap(
+    cmap: Optional[Union[Colormaps, matplotlib.colors.ListedColormap]] = Colormaps.RETRO
+) -> None:
+    if isinstance(cmap, Colormaps):
+        cmap = cmap.value
     matplotlib.pyplot.rcParams["axes.prop_cycle"] = cycler(
-        color=[cmap.value(i) for i in range(cmap.value.N)]
+        color=[cmap(i) for i in range(cmap.N)]
     )
