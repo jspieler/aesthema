@@ -1,6 +1,6 @@
 """Provides custom colormaps for Matplotlib."""
 from enum import Enum
-from typing import List, Optional
+from typing import List, Optional, Tuple, Union
 
 import matplotlib
 from cycler import cycler
@@ -8,7 +8,20 @@ from cycler import cycler
 from .colors import Colors
 
 
-def create_colormap(colors: List[Colors]) -> matplotlib.colors.ListedColormap:
+def create_colormap(
+    colors: List[Union[Colors, Tuple[int, int, int]]]
+) -> matplotlib.colors.ListedColormap:
+    used_colors = []
+    for color in colors:
+        if isinstance(color, Colors):
+            used_colors.append(color.value)
+        elif isinstance(color, tuple) and len(color) == 3:
+            used_colors.append(color)
+        else:
+            raise ValueError(
+                "Invalid color format when creating a new colormap. "
+                "Use either a color from the Colors enum or a tuple containing RGB values."
+            )
     return matplotlib.colors.ListedColormap(
         [tuple(color_value / 255 for color_value in color.value) for color in colors]
     )
