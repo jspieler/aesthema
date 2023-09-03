@@ -68,4 +68,4 @@ use_colormap(my_colormap)
 
 ## Contributing
 
-You create a nice colormap that you want to share with others? Awesome! Create a pull request and we will add it.
+You created a nice colormap that you want to share with others? Awesome! Create a pull request and we will add it.
