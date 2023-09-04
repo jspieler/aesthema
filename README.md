@@ -6,9 +6,11 @@ Matplotlib is a great package for visualizations, but we've all been there when 
 This is where this small package comes into play. Instead of creating your own colormaps all the time, you can use the provided colormaps or you can also easily create your own colormaps either by using the provided colors or any RGB color.
 
 Currently available colors:
+
 ![Available colors](./docs/colors.svg)
 
 Currently available colormaps:
+
 ![Available colormaps](./docs/colormaps.svg)
 
 ## Quickstart
