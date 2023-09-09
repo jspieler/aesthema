@@ -107,6 +107,76 @@ class Colormaps(Enum):
             Colors.VAN_DYKE,
         ]
     )
+    BLUE = create_colormap(
+        [
+            Colors.COLUMBIA_BLUE,
+            Colors.OXFORD_BLUE,
+            Colors.SAPPHIRE,
+            Colors.BICE_BLUE,
+            Colors.PRUSSIAN_BLUE,
+        ]
+    )
+    SIMPLE = create_colormap(
+        [
+            Colors.XANTHOUS,
+            Colors.LIGHT_SEA_GREEN,
+            Colors.TAUPE_GRAY,
+            Colors.BITTERSWEET,
+            Colors.ASPARAGUS,
+            Colors.MULBERRY,
+        ]
+    )
+    BRIGHT = create_colormap(
+        [
+            Colors.HOLLYWOOD_CERISE,
+            Colors.ELECTRIC_BLUE,
+            Colors.SPRING_BUD,
+            Colors.YELLOW,
+            Colors.ORANGE_WHEEL,
+            Colors.RED_CYMK,
+        ]
+    )
+    SWEET = create_colormap(
+        [
+            Colors.BRIGHT_PINK_CRAYOLA,
+            Colors.BABY_POWDER,
+            Colors.CELESTE,
+            Colors.CADET_GRAY,
+            Colors.EGGPLANT,
+            Colors.RAISIN_BLACK,
+        ]
+    )
+    HIGH_CONTRAST = create_colormap(
+        [
+            Colors.INDIGO,
+            Colors.CRAYOLA,
+            Colors.ATOMIC_TANGERINE,
+            Colors.SUNGLOW,
+            Colors.TURQUOISE,
+            Colors.JADE,
+        ]
+    )
+    EARLY_SPRING = create_colormap(
+        [
+            Colors.POWDER_BLUE,
+            Colors.LIGHT_BLUE,
+            Colors.CREAM,
+            Colors.WHEAT,
+            Colors.APRICOT,
+            Colors.TAN,
+        ]
+    )
+    PALE_NIGHT = create_colormap(
+        [
+            Colors.POMP_AND_POWER,
+            Colors.FRENCH_GRAY,
+            Colors.CAMBRIDGE_BLUE,
+            Colors.SAGE,
+            Colors.HUNYADI_YELLOW,
+            Colors.COCOA_BROWN,
+            Colors.PERSIAN_RED,
+        ]
+    )
 
 
 def use_colormap(
