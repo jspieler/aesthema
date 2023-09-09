@@ -180,7 +180,7 @@ class Colormaps(Enum):
 
 
 def use_colormap(
-    cmap: Optional[Union[Colormaps, ListedColormap]] = Colormaps.RETRO
+    cmap: Optional[Union[Colormaps, ListedColormap]] = Colormaps.HIGH_CONTRAST
 ) -> None:
     if isinstance(cmap, Colormaps):
         cmap = cmap.value
