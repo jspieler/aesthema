@@ -49,6 +49,8 @@ plt.ylabel("Amplitude")
 plt.show()
 ```
 
+![Line plot example](./docs/lineplot.svg)
+
 In this example, we use the default colormap. If you want to use a different colormap, just specify it when calling `use_colormap`, e.g.:
 
 ```python
