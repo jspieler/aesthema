@@ -7,11 +7,11 @@ This is where this small package comes into play. Instead of creating your own c
 
 Currently available colors:
 
-![Available colors](./docs/colors.svg)
+![Available colors](https://github.com/jspieler/aesthema/blob/main/docs/colors.svg?raw=True)
 
 Currently available colormaps:
 
-![Available colormaps](./docs/colormaps.svg)
+![Available colormaps](https://github.com/jspieler/aesthema/blob/main/docs/colormaps.svg?raw=True)
 
 ## Quickstart
 
