@@ -1,4 +1,4 @@
-# aesthema-colormaps
+# Aesthema
 
 Aesthema provides modern &amp; visually appealing colormaps for Matplotlib.
 
@@ -18,7 +18,7 @@ Currently available colormaps:
 You can install the package using `pip`:
 
 ```
-pip install aesthema_colormaps
+pip install aesthema
 ```
 
 Let's take a look at some examples:
@@ -27,7 +27,7 @@ Let's take a look at some examples:
 import numpy as np
 import matplotlib.pyplot as plt
 
-from aesthema_colormaps import use_colormap
+from aesthema import use_colormap
 
 
 use_colormap()
@@ -54,7 +54,7 @@ plt.show()
 In this example, we use the default colormap. If you want to use a different colormap, just specify it when calling `use_colormap`, e.g.:
 
 ```python
-from aesthema_colormaps import use_colormap, Colormaps
+from aesthema import use_colormap, Colormaps
 
 
 use_colormap(Colormaps.PASTEL)
@@ -63,7 +63,7 @@ use_colormap(Colormaps.PASTEL)
 You can also create your own custom colormap using either the colors provided in this package or any RGB color:
 
 ```python
-from aesthema_colormaps import create_colormap, use_colormap, Colors
+from aesthema import create_colormap, use_colormap, Colors
 
 
 my_colormap = create_colormap([Colors.RED, Colors.ORANGE, Colors.LEMON, (141, 215, 127), Colors.LIGHT_OCEAN, (47, 72, 88)])

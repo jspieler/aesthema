@@ -6,14 +6,14 @@ with open(os.path.join(directory, "README.md"), encoding="utf-8") as f:
     long_description = f.read()
 
 setup(
-    name="aesthema_colormaps",
+    name="aesthema",
     version="0.1.0",
     description="Modern & visually appealing colormaps for Matplotlib",
     author="jspieler",
     license="MIT",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    packages=["aesthema_colormaps"],
+    packages=["aesthema"],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",

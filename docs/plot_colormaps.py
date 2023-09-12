@@ -5,7 +5,7 @@ from enum import Enum
 from matplotlib.figure import Figure
 import matplotlib.pyplot as plt
 
-from aesthema_colormaps import Colormaps
+from aesthema import Colormaps
 
 
 def plot_colormaps(

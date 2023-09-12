@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-from aesthema_colormaps import create_colormap, use_colormap, Colormaps, Colors
+from aesthema import create_colormap, use_colormap, Colormaps, Colors
 
  
 if __name__ == "__main__":

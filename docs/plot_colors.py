@@ -9,7 +9,7 @@ from matplotlib.figure import Figure
 import matplotlib.pyplot as plt
 from matplotlib.patches import Rectangle
 
-from aesthema_colormaps import Colors
+from aesthema import Colors
 
 
 def plot_colors(colors: Colors, ncols: int = 4, sort_colors: bool = True) -> Figure:
