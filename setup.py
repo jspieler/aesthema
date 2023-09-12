@@ -7,7 +7,7 @@ with open(os.path.join(directory, "README.md"), encoding="utf-8") as f:
 
 setup(
     name="aesthema",
-    version="0.1.0",
+    version="0.1.1",
     description="Modern & visually appealing colormaps for Matplotlib",
     author="jspieler",
     license="MIT",
