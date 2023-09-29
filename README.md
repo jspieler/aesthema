@@ -66,7 +66,16 @@ You can also create your own custom colormap using either the colors provided in
 from aesthema import create_colormap, use_colormap, Colors
 
 
-my_colormap = create_colormap([Colors.RED, Colors.ORANGE, Colors.LEMON, (141, 215, 127), Colors.LIGHT_OCEAN, (47, 72, 88)])
+my_colormap = create_colormap(
+    [
+        Colors.RED,
+        Colors.ORANGE,
+        Colors.LEMON,
+        (141, 215, 127),
+        Colors.LIGHT_OCEAN,
+        (47, 72, 88),
+    ]
+)
 use_colormap(my_colormap)
 ```
 

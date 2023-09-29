@@ -12,6 +12,8 @@ from .colors import Colors
 def create_colormap(
     colors: List[Union[Colors, Tuple[int, int, int]]]
 ) -> ListedColormap:
+    """Creates a Matplotlib ListedColormap given either colors from 
+    the Colors enum or RGB values."""
     used_colors = []
     for color in colors:
         if isinstance(color, Colors):
@@ -21,7 +23,8 @@ def create_colormap(
         else:
             raise ValueError(
                 "Invalid color format when creating a new colormap. "
-                "Use either a color from the Colors enum or a tuple containing RGB values."
+                "Use either a color from the Colors enum or a tuple "
+                "containing RGB values."
             )
     return ListedColormap(
         [tuple(color_value / 255 for color_value in color) for color in used_colors]
@@ -182,6 +185,11 @@ class Colormaps(Enum):
 def use_colormap(
     cmap: Optional[Union[Colormaps, ListedColormap]] = Colormaps.HIGH_CONTRAST
 ) -> None:
+    """Sets the colormap used for Matplotlib.
+
+    Args:
+        cmap: An Aesthema or Matplotlib colormap. Defaults to Colormaps.HIGH_CONTRAST.
+    """
     if isinstance(cmap, Colormaps):
         cmap = cmap.value
     plt.rcParams["axes.prop_cycle"] = cycler(color=[cmap(i) for i in range(cmap.N)])

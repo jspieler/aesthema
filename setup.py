@@ -10,6 +10,7 @@ setup(
     version="0.1.1",
     description="Modern & visually appealing colormaps for Matplotlib",
     author="jspieler",
+    url="https://github.com/jspieler/aesthema",
     license="MIT",
     long_description=long_description,
     long_description_content_type="text/markdown",
