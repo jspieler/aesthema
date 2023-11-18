@@ -33,6 +33,6 @@ jobs:
     - name: Lint with pylint
       run: python -m pylint aesthema/
     - name: Run mypy
-      run: python -m mypy
+      run: python -m mypy .
     - name: Run unittests
       run: python -m unittest
