@@ -193,4 +193,4 @@ def use_colormap(
     """
     if isinstance(cmap, Colormaps):
         cmap = cmap.value
-    plt.rcParams["axes.prop_cycle"] = cycler(color=[cmap(i) for i in range(cmap.N)])
+    plt.rcParams["axes.prop_cycle"] = cycler(color=[cmap(i) for i in range(cmap.N)])  # type: ignore
