@@ -66,15 +66,16 @@ class Colormaps(Enum):
             Colors.BERRY,
         ]
     )
-    ASPECT = create_colormap
-    [
-        Colors.CADET_GRAY,
-        Colors.SILVER,
-        Colors.MYRTLE_GREEN,
-        Colors.CHINESE_VIOLET,
-        Colors.REDWOOD,
-        Colors.IMPERIAL_RED,
-    ]
+    ASPECT = create_colormap(
+        [
+            Colors.CADET_GRAY,
+            Colors.SILVER,
+            Colors.MYRTLE_GREEN,
+            Colors.CHINESE_VIOLET,
+            Colors.REDWOOD,
+            Colors.IMPERIAL_RED,
+        ]
+    )
     AUTUMN = create_colormap(
         [
             Colors.DARK_SLATE_GRAY,
