@@ -1,5 +1,14 @@
 exclude = [
   "docs/",
+  "examples/",
+]
+
+[per-file-ignores]
+"aesthema/__init__.py" = [
+  "F401",
+]
+"examples/*" = [
+  "F401",
 ]
 
 [lint.pydocstyle]
