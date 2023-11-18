@@ -19,7 +19,7 @@ class TestColormaps(unittest.TestCase):
                 Colors.ORANGE,
                 Colors.YELLOW,
                 Colors.PERSIAN_GREEN,
-                Colors.VIVID_SKY_BLUE,
+                Colors.LIGHT_BLUE,
                 Colors.BRIGHT_PINK_CRAYOLA,
             ]
         )
